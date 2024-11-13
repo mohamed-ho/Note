@@ -66,10 +66,6 @@ class NoteSetting extends StatelessWidget {
                   },
                 ),
                 PopupMenuItem(
-                  onTap: defaultSettings,
-                  child: const Text('Default Settings'),
-                ),
-                PopupMenuItem(
                   child: const Text('Text Family'),
                   onTap: () {
                     showDialog(
@@ -104,6 +100,10 @@ class NoteSetting extends StatelessWidget {
                       ),
                     );
                   },
+                ),
+                PopupMenuItem(
+                  onTap: defaultSettings,
+                  child: const Text('Default Settings'),
                 ),
               ]);
         },

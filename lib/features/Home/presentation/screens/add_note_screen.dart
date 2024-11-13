@@ -61,6 +61,7 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
                   setState(() {
                     noteColor = Colors.transparent;
                     textColor = Colors.white;
+                    fontFamily = FontFamily.roboto;
                   });
                 },
                 onFontFamilyTap: (value) {
