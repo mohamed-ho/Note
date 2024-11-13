@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes/features/Home/presentation/widgets/custom_shearch_delegate.dart';
 
 class SearchIconButton extends StatelessWidget {
   const SearchIconButton({super.key});
@@ -12,9 +13,17 @@ class SearchIconButton extends StatelessWidget {
         color: Colors.white.withOpacity(.1),
         borderRadius: BorderRadius.circular(10),
       ),
-      child: const Icon(
-        Icons.search,
-        size: 30,
+      child: InkWell(
+        onTap: () async {
+          final value = await showSearch(
+              context: context,
+              delegate: CustomSearchDelegate(['ahmed', 'ali']));
+   
+        },
+        child: const Icon(
+          Icons.search,
+          size: 30,
+        ),
       ),
     );
   }
