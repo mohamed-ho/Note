@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'package:notes/features/Home/presentation/screens/add_note_screen.dart';
+import 'package:notes/config/routes/note_routes.dart';
 
 class CustomFloatingActionButton extends StatelessWidget {
   const CustomFloatingActionButton({super.key});
@@ -12,11 +10,7 @@ class CustomFloatingActionButton extends StatelessWidget {
     return FloatingActionButton(
       backgroundColor: Colors.tealAccent.shade700,
       onPressed: () {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const AddNoteScreen(),
-            ));
+        Navigator.pushNamed(context, NoteRoutes.addNoteScreen);
       },
       child: Icon(
         Icons.add,

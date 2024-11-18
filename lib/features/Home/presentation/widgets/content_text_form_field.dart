@@ -29,7 +29,7 @@ class ContentTextFormField extends StatelessWidget {
         if (value.isEmpty) return 'content con not be empty';
         return null;
       },
-      decoration: CustomInputDecoration(
+      decoration: customInputDecoration(
         hintText: 'content',
         hintStyle: TextStyle(
             fontSize: 16,

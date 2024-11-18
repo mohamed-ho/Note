@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:notes/features/Home/domain/entities/note.dart';
 import 'package:notes/features/Home/presentation/widgets/custom_shearch_delegate.dart';
 
 class SearchIconButton extends StatelessWidget {
-  const SearchIconButton({super.key});
-
+  const SearchIconButton({super.key, required this.notes});
+  final List<Note> notes;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,10 +16,8 @@ class SearchIconButton extends StatelessWidget {
       ),
       child: InkWell(
         onTap: () async {
-          final value = await showSearch(
-              context: context,
-              delegate: CustomSearchDelegate(['ahmed', 'ali']));
-   
+          await showSearch(
+              context: context, delegate: CustomSearchDelegate(notes));
         },
         child: const Icon(
           Icons.search,
