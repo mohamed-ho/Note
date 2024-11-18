@@ -23,13 +23,14 @@ class TitleTextFormField extends StatelessWidget {
         if (value.isEmpty) return 'content con not be empty';
         return null;
       },
+      maxLength: 30,
       onChanged: onChange,
       style: TextStyle(
           fontSize: 22,
           fontWeight: FontWeight.bold,
           color: textColor,
           fontFamily: fontFamilyConverter(fontFamily)),
-      decoration: CustomInputDecoration(
+      decoration: customInputDecoration(
         hintText: 'title',
         hintStyle: TextStyle(
             fontSize: 22,

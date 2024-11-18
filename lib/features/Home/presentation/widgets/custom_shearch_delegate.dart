@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:notes/features/Home/domain/entities/note.dart';
+import 'package:notes/features/Home/presentation/widgets/note_item.dart';
 
 class CustomSearchDelegate extends SearchDelegate {
-  final List<String> items;
+  final List<Note> notes;
 
-  CustomSearchDelegate(this.items);
+  CustomSearchDelegate(this.notes);
 
   @override
   List<Widget>? buildActions(BuildContext context) {
@@ -29,35 +31,31 @@ class CustomSearchDelegate extends SearchDelegate {
 
   @override
   Widget buildResults(BuildContext context) {
-    final List<String> results = items
-        .where((item) => item.toLowerCase().contains(query.toLowerCase()))
+    final List<Note> results = notes
+        .where((note) => note.title.toLowerCase().contains(query.toLowerCase()))
         .toList();
 
     return ListView.builder(
       itemCount: results.length,
       itemBuilder: (context, index) {
-        return ListTile(
-          title: Text(results[index]),
-          onTap: () {
-            close(context, results[index]);
-          },
-        );
+        return NoteItem(note: notes[index]);
       },
     );
   }
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    final List<String> suggestions = items
-        .where((item) => item.toLowerCase().contains(query.toLowerCase()))
+    final List<Note> suggestions = notes
+        .where((note) => note.title.toLowerCase().contains(query.toLowerCase()))
         .toList();
+
     return ListView.builder(
       itemCount: suggestions.length,
       itemBuilder: (context, index) {
         return ListTile(
-          title: Text(suggestions[index]),
+          title: Text(suggestions[index].title),
           onTap: () {
-            query = suggestions[index];
+            query = suggestions[index].title;
             showResults(context);
           },
         );

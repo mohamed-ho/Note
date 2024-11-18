@@ -14,3 +14,18 @@ String fontFamilyConverter(FontFamily fontFamily) {
       return 'Roboto';
   }
 }
+
+FontFamily fontFamilyFromString(String value) {
+  switch (value) {
+    case 'FontFamily.anton':
+      return FontFamily.anton;
+    case 'FontFamily.dancing':
+      return FontFamily.dancing;
+    case 'FontFamily.edu':
+      return FontFamily.edu;
+    case 'FontFamily.roboto':
+      return FontFamily.roboto;
+    default:
+      return FontFamily.roboto;
+  }
+}
