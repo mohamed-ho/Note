@@ -43,7 +43,7 @@ The project is structured following the principles of Clean Architecture to ensu
 
 Add screenshots or GIFs here to showcase your app's UI and features.  
 Example:  
-![Notes App Screenshot](link-to-screenshot)
+![Screenshot_1731939055](https://github.com/user-attachments/assets/b3b26339-140a-4ccb-b71d-2aba9cf63e01)
 
 ---
 
