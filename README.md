@@ -12,7 +12,7 @@
 <img src = "https://github.com/user-attachments/assets/42e33c9c-03c9-44d0-8408-eaa3c37a0bf7" width = "175" hight = "470">
 </div>
 
-## Demo video
+## Demo
 
 ![note](https://github.com/user-attachments/assets/9f29dfbb-c26b-4d5c-bda7-2d820e780c82)
 
