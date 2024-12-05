@@ -17,7 +17,6 @@
 ![note](https://github.com/user-attachments/assets/9f29dfbb-c26b-4d5c-bda7-2d820e780c82)
 
 ---
----
 
 ## Features
 
@@ -53,15 +52,3 @@ The project is structured following the principles of Clean Architecture to ensu
 - **Data Layer**: Manages data sources, including the sqflite database and repositories.
 
 ---
-
-## Screenshots
-
-<div>
-<img src = "https://github.com/user-attachments/assets/b3b26339-140a-4ccb-b71d-2aba9cf63e01" width = "275" hight = "570">
-<img src = "https://github.com/user-attachments/assets/7b6de67a-5281-4008-9241-e08a89bdf46d" width = "275" hight = "570">
-<img src = "https://github.com/user-attachments/assets/42e33c9c-03c9-44d0-8408-eaa3c37a0bf7" width = "275" hight = "570">
-</div>
-
-## Demo video
-
-![note](https://github.com/user-attachments/assets/9f29dfbb-c26b-4d5c-bda7-2d820e780c82)
