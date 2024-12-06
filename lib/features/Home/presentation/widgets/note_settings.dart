@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_material_color_picker/flutter_material_color_picker.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:notes/core/constants/font_family.dart';
-import 'package:notes/core/functions/font_family_converter.dart';
+import 'package:notes/core/functions/get_device_language.dart';
+import 'package:notes/features/Home/presentation/widgets/text_family_style_example.dart';
+import 'package:notes/generated/l10n.dart';
 
 class NoteSetting extends StatelessWidget {
   const NoteSetting(
@@ -21,20 +22,22 @@ class NoteSetting extends StatelessWidget {
         onPressed: () {
           showMenu(
               context: context,
-              position: const RelativeRect.fromLTRB(100, 0, 0, 200),
+              position: getDeviceLanguage() == 'ar'
+                  ? const RelativeRect.fromLTRB(0, 0, 100, 200)
+                  : const RelativeRect.fromLTRB(100, 0, 0, 200),
               items: [
                 PopupMenuItem(
-                  child: const Text('Note Color'),
+                  child: Text(S.of(context).noteColor),
                   onTap: () {
                     showDialog(
                       context: context,
                       builder: (context) => AlertDialog(
-                        title: const Text('Select you color '),
+                        title: Text(S.of(context).selectColor),
                         content: MaterialColorPicker(
                             onColorChange: onNoteColorChange),
                         actions: [
                           ElevatedButton(
-                            child: const Text('Got it'),
+                            child: Text(S.of(context).gotIt),
                             onPressed: () {
                               Navigator.of(context).pop();
                             },
@@ -45,17 +48,17 @@ class NoteSetting extends StatelessWidget {
                   },
                 ),
                 PopupMenuItem(
-                  child: const Text('Text Color'),
+                  child: Text(S.of(context).textColor),
                   onTap: () {
                     showDialog(
                       context: context,
                       builder: (context) => AlertDialog(
-                        title: const Text('Select you color '),
+                        title: Text(S.of(context).selectColor),
                         content: MaterialColorPicker(
                             onColorChange: onTextColorChange),
                         actions: [
                           ElevatedButton(
-                            child: const Text('Got it'),
+                            child: Text(S.of(context).gotIt),
                             onPressed: () {
                               Navigator.of(context).pop();
                             },
@@ -66,15 +69,15 @@ class NoteSetting extends StatelessWidget {
                   },
                 ),
                 PopupMenuItem(
-                  child: const Text('Text Family'),
+                  child: Text(S.of(context).textFamily),
                   onTap: () {
                     showDialog(
                       context: context,
                       builder: (context) => AlertDialog(
-                        title: const Text(
-                          'Select your Text Family',
+                        title: Text(
+                          S.of(context).selectTextFamily,
                           textAlign: TextAlign.center,
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontSize: 16, fontWeight: FontWeight.bold),
                         ),
                         content: Column(
@@ -103,36 +106,10 @@ class NoteSetting extends StatelessWidget {
                 ),
                 PopupMenuItem(
                   onTap: defaultSettings,
-                  child: const Text('Default Settings'),
+                  child: Text(S.of(context).defaultSettings),
                 ),
               ]);
         },
         icon: const Icon(Icons.settings));
-  }
-}
-
-class TextFamilyStyleExample extends StatelessWidget {
-  const TextFamilyStyleExample(
-      {super.key, required this.fontFamily, required this.onFontFamilyChange});
-  final FontFamily fontFamily;
-  final ValueChanged<FontFamily> onFontFamilyChange;
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 10.h),
-      child: InkWell(
-        onTap: () {
-          onFontFamilyChange.call(fontFamily);
-          Navigator.pop(context);
-        },
-        child: Text(
-          'please Choose your Font Family',
-          style: TextStyle(
-            fontSize: 14,
-            fontFamily: fontFamilyConverter(fontFamily),
-          ),
-        ),
-      ),
-    );
   }
 }

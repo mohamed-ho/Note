@@ -1,0 +1,15 @@
+{
+    "errorProcess":"Error Process",
+    "ok":"OK",
+    "content":"Content",
+    "notes":"Notes",
+    "thereIsNoNote":"There is No Notes",
+    "noteColor": "Background Color",
+    "selectColor": "Select you color",
+    "gotIt" : "Got it",
+    "textColor": "Text Color",
+    "textFamily": "Text Family",
+    "selectTextFamily":"Select Text Family",
+    "defaultSettings":"Default Settings",
+    "title": "Title"
+}

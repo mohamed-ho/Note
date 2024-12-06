@@ -3,7 +3,7 @@ description: "A new Flutter project."
 
 publish_to: 'none'
 
-version: 1.0.0+1
+version: 1.0.4+5
 
 environment:
   sdk: ^3.5.3
@@ -14,13 +14,14 @@ dependencies:
   equatable: ^2.0.5
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   flutter_bloc: ^8.1.6
-  
   flutter_material_color_picker: ^1.2.0
   flutter_native_splash: ^2.4.2
   flutter_screenutil: ^5.9.3
   get_it: ^8.0.2
-  intl: ^0.20.0
+
   path: ^1.9.0
   sqflite: ^2.4.1
 
@@ -39,8 +40,6 @@ flutter_native_splash:
   android: true
   ios: true
 
-
-
 flutter_launcher_icons:
   adaptive_icon_foreground: "assets/icons/android12_icon.png"
   adaptive_icon_background: "assets/icons/android12_icon.png"
@@ -51,7 +50,7 @@ flutter_launcher_icons:
 
 flutter:
   uses-material-design: true
-  
+
   assets:
     - assets/icons/
     - assets/images/
@@ -69,3 +68,5 @@ flutter:
     - family: Roboto
       fonts:
         - asset: assets/fonts/Roboto.ttf
+flutter_intl:
+  enabled: true

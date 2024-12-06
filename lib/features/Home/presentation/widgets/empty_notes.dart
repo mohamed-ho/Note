@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:notes/generated/l10n.dart';
 
 class EmptyNotes extends StatelessWidget {
   const EmptyNotes({super.key});
@@ -19,7 +20,7 @@ class EmptyNotes extends StatelessWidget {
               height: .5.sw,
             ),
             Text(
-              'there is no Notes ',
+              S.of(context).thereIsNoNote,
               style: TextStyle(fontSize: 22, color: Colors.blueGrey.shade200),
             )
           ],

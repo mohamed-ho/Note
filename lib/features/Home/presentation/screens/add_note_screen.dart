@@ -9,6 +9,7 @@ import 'package:notes/features/Home/presentation/cubit/cubit/note_cubit.dart';
 import 'package:notes/features/Home/presentation/widgets/content_text_form_field.dart';
 import 'package:notes/features/Home/presentation/widgets/note_settings.dart';
 import 'package:notes/features/Home/presentation/widgets/title_text_form_field.dart';
+import 'package:notes/generated/l10n.dart';
 
 class AddNoteScreen extends StatefulWidget {
   const AddNoteScreen({super.key});
@@ -36,7 +37,7 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
             });
           } else if (state is NoteCompleteProcessState) {
             Navigator.pushNamedAndRemoveUntil(
-                context, NoteRoutes.homeScreen, (route) => true);
+                context, NoteRoutes.homeScreen, (route) => false);
           } else if (state is NoteErrorSate) {
             setState(() {
               isLoading = false;
@@ -44,14 +45,14 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
             showDialog(
                 context: context,
                 builder: (context) => AlertDialog(
-                      title: const Text('Error Process'),
+                      title: Text(S.of(context).errorProcess),
                       content: Text(state.message),
                       actions: [
                         ElevatedButton(
                             onPressed: () {
                               Navigator.pop(context);
                             },
-                            child: const Text('OK'))
+                            child: Text(S.of(context).ok))
                       ],
                     ));
           }

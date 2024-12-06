@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:notes/core/constants/font_family.dart';
 import 'package:notes/core/functions/font_family_converter.dart';
 import 'package:notes/features/Home/presentation/widgets/custom_input_decoration.dart';
+import 'package:notes/generated/l10n.dart';
 
 class ContentTextFormField extends StatelessWidget {
   const ContentTextFormField(
@@ -24,13 +25,8 @@ class ContentTextFormField extends StatelessWidget {
           color: textColor,
           fontFamily: fontFamilyConverter(fontFamily)),
       controller: content,
-      validator: (value) {
-        if (value == null) return 'content con not be empty';
-        if (value.isEmpty) return 'content con not be empty';
-        return null;
-      },
       decoration: customInputDecoration(
-        hintText: 'content',
+        hintText: S.of(context).content,
         hintStyle: TextStyle(
             fontSize: 16,
             color: textColor,

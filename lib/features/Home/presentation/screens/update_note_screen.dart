@@ -9,6 +9,7 @@ import 'package:notes/features/Home/presentation/cubit/cubit/note_cubit.dart';
 import 'package:notes/features/Home/presentation/widgets/content_text_form_field.dart';
 import 'package:notes/features/Home/presentation/widgets/note_settings.dart';
 import 'package:notes/features/Home/presentation/widgets/title_text_form_field.dart';
+import 'package:notes/generated/l10n.dart';
 
 class UpdateNoteScreen extends StatefulWidget {
   const UpdateNoteScreen({super.key, required this.note});
@@ -54,14 +55,14 @@ class _UpdateNoteScreenState extends State<UpdateNoteScreen> {
             showDialog(
                 context: context,
                 builder: (context) => AlertDialog(
-                      title: const Text('Error Process'),
+                      title: Text(S.of(context).errorProcess),
                       content: Text(state.message),
                       actions: [
                         ElevatedButton(
                             onPressed: () {
                               Navigator.pop(context);
                             },
-                            child: const Text('OK'))
+                            child: Text(S.of(context).ok))
                       ],
                     ));
           }

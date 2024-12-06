@@ -1,0 +1,15 @@
+{
+    "errorProcess":"حدث خصأ",
+    "ok":"تم",
+    "content":"الموضوع",
+    "notes":"الملحوظات",
+    "thereIsNoNote":"لا يوجد ملحوظات",
+    "noteColor": "لون الخلفية ",
+    "selectColor": "اختر لون",
+    "gotIt" : "موافق",
+    "textColor": "لون الخط",
+    "textFamily": "نوع الخط",
+    "selectTextFamily":"اختر نوع الخط",
+    "defaultSettings":"الاعدادات الافتراضية",
+    "title": "العنوان"
+}

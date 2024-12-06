@@ -33,7 +33,7 @@ class NoteItem extends StatelessWidget {
               children: [
                 ListTile(
                   title: Text(
-                    overFlowTextHandler(note.title, 17),
+                    note.title,
                     maxLines: 1,
                     style: TextStyle(
                         fontFamily: fontFamilyConverter(note.fontFamily),
@@ -42,7 +42,7 @@ class NoteItem extends StatelessWidget {
                         fontWeight: FontWeight.bold),
                   ),
                   subtitle: Text(
-                    overFlowTextHandler(note.content, 40),
+                    note.content,
                     overflow: TextOverflow.clip,
                     maxLines: 2,
                     style: TextStyle(

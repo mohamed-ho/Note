@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:notes/core/constants/font_family.dart';
 import 'package:notes/core/functions/font_family_converter.dart';
 import 'package:notes/features/Home/presentation/widgets/custom_input_decoration.dart';
+import 'package:notes/generated/l10n.dart';
 
 class TitleTextFormField extends StatelessWidget {
   const TitleTextFormField(
@@ -18,11 +19,6 @@ class TitleTextFormField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child: TextFormField(
-      validator: (value) {
-        if (value == null) return 'content con not be empty';
-        if (value.isEmpty) return 'content con not be empty';
-        return null;
-      },
       maxLength: 30,
       onChanged: onChange,
       style: TextStyle(
@@ -31,7 +27,7 @@ class TitleTextFormField extends StatelessWidget {
           color: textColor,
           fontFamily: fontFamilyConverter(fontFamily)),
       decoration: customInputDecoration(
-        hintText: 'title',
+        hintText: S.of(context).title,
         hintStyle: TextStyle(
             fontSize: 22,
             fontWeight: FontWeight.bold,
