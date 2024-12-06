@@ -68,5 +68,17 @@ flutter:
     - family: Roboto
       fonts:
         - asset: assets/fonts/Roboto.ttf
+    - family: arabic1
+      fonts:
+        - asset: assets/fonts/arabic1.ttf
+    - family: arabic2
+      fonts:
+        - asset: assets/fonts/arabic2.ttf
+    - family: arabic3
+      fonts:
+        - asset: assets/fonts/arabic3.ttf
+    - family: arabic4
+      fonts:
+        - asset: assets/fonts/arabic4.ttf
 flutter_intl:
   enabled: true

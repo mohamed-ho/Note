@@ -9,7 +9,6 @@ class Notes extends StatelessWidget {
   const Notes({super.key});
   @override
   Widget build(BuildContext context) {
-    print('${getDeviceLanguage()}----------------------');
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       child: SafeArea(

@@ -81,22 +81,31 @@ class NoteSetting extends StatelessWidget {
                               fontSize: 16, fontWeight: FontWeight.bold),
                         ),
                         content: Column(
+                          mainAxisSize: MainAxisSize.min,
                           children: [
                             TextFamilyStyleExample(
                               onFontFamilyChange: onFontFamilyTap,
-                              fontFamily: FontFamily.anton,
+                              fontFamily: getDeviceLanguage() == 'ar'
+                                  ? FontFamily.arabic1
+                                  : FontFamily.anton,
                             ),
                             TextFamilyStyleExample(
                               onFontFamilyChange: onFontFamilyTap,
-                              fontFamily: FontFamily.dancing,
+                              fontFamily: getDeviceLanguage() == 'ar'
+                                  ? FontFamily.arabic2
+                                  : FontFamily.dancing,
                             ),
                             TextFamilyStyleExample(
                               onFontFamilyChange: onFontFamilyTap,
-                              fontFamily: FontFamily.edu,
+                              fontFamily: getDeviceLanguage() == 'ar'
+                                  ? FontFamily.arabic4
+                                  : FontFamily.edu,
                             ),
                             TextFamilyStyleExample(
                               onFontFamilyChange: onFontFamilyTap,
-                              fontFamily: FontFamily.roboto,
+                              fontFamily: getDeviceLanguage() == 'ar'
+                                  ? FontFamily.arabic3
+                                  : FontFamily.roboto,
                             )
                           ],
                         ),

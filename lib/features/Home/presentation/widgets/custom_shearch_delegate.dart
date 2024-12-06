@@ -52,13 +52,7 @@ class CustomSearchDelegate extends SearchDelegate {
     return ListView.builder(
       itemCount: suggestions.length,
       itemBuilder: (context, index) {
-        return ListTile(
-          title: Text(suggestions[index].title),
-          onTap: () {
-            query = suggestions[index].title;
-            showResults(context);
-          },
-        );
+        return NoteItem(note: suggestions[index]);
       },
     );
   }
