@@ -12,7 +12,7 @@
 <img src = "https://github.com/user-attachments/assets/42e33c9c-03c9-44d0-8408-eaa3c37a0bf7" width = "175" hight = "470">
 </div>
 
-## Demo
+## gif
 
 ![note](https://github.com/user-attachments/assets/9f29dfbb-c26b-4d5c-bda7-2d820e780c82)
 
@@ -52,3 +52,7 @@ The project is structured following the principles of Clean Architecture to ensu
 - **Data Layer**: Manages data sources, including the sqflite database and repositories.
 
 ---
+## Google play 
+```
+https://play.google.com/store/apps/details?id=eng.mohamed.note.dev
+```
